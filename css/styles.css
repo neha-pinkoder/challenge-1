@@ -1,0 +1,65 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 700;
+  line-height: 2;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+.first {
+  background: white;
+  padding: 4%;
+  grid-area: first;
+}
+
+
+.second {
+  background-color: #2ab2af;
+  padding: 5%;
+  grid-area:second;
+}
+
+.third {
+  background:#73dedc;
+  padding: 5%;
+  grid-area:third;
+}
+main {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.8fr 1fr ;
+  grid-template-areas:
+  "first first"
+  "second third";
+}
+@media only screen and (max-width:375px)
+{
+  main{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas:
+    "first"
+    "second"
+    "third";
+  }
+}
